@@ -40,7 +40,7 @@ writeVideo_flag = False  # Set Writing Video output
 max_cosine_distance = 0.5
 nn_budget = None
 nms_max_overlap = 0.3
-
+parham =2
 
 # tracker and coder init
 def tracker_coder_init(Encoder_dir, max_cosine_distance, nn_budget):
