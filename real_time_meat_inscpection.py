@@ -5,7 +5,7 @@ Meat type tracking and detection model
 """
 from deep_sort.detection import Detection
 import numpy as np
-from ROI_EXtraction.ROI_EX_from_image import ROX_EX_image
+from ROI_EXtraction.ROI_EX_from_image_Sort import ROX_EX_image
 from deep_sort import preprocessing
 from timeit import time
 from deep_sort.tracker import Tracker
@@ -28,7 +28,6 @@ PATH_TO_LABELS = '/media/pk/Data/Project/dataset/Meat_image/RMIT/Original_datase
                  'Annotation_Pascal_Voc/TFrecord_format/6_class/Meat_label_map_6_classes.pbtxt'
 
 
-target_name = ['ChunkRoll', 'CubeRoll', 'Rump', 'ShinBeef', 'Striploin', 'Tenderloin']
 
 
 # Init parameters
@@ -40,7 +39,7 @@ writeVideo_flag = False  # Set Writing Video output
 max_cosine_distance = 0.5
 nn_budget = None
 nms_max_overlap = 0.3
-parham =2
+
 
 # tracker and coder init
 def tracker_coder_init(Encoder_dir, max_cosine_distance, nn_budget):
