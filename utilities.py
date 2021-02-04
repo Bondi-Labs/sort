@@ -12,7 +12,6 @@ def crop_frame(frame, size_reduction):
     return new_frame
 
 
-
 # Return class majority of the detected object
 def Class_majority_find(container, ID, class_total):
     IDs_classes = [i for i, j in enumerate(container) if j == ID]
@@ -25,37 +24,35 @@ def Class_majority_find(container, ID, class_total):
     return Class_major
 
 
-
-#
-# def Text_indicator(Meat_Category, Target_Class, Indicator_page):
-#     font = cv2.FONT_HERSHEY_SIMPLEX
-#     fontScale = 1
-#     color = (0, 0, 0)
-#     thickness = 3
-#     cv2.putText(Indicator_page, "STATISTICAL INDICATOR", (int(120), int(60)), font, 1.5, color, 5, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[0] + ' : ' + str(Meat_Category[0]), (int(120), int(150)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[1] + ' : ' + str(Meat_Category[1]), (int(120), int(250)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[2] + ' : ' + str(Meat_Category[2]), (int(120), int(350)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[3] + ' : ' + str(Meat_Category[3]), (int(120), int(450)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[4] + ' : ' + str(Meat_Category[4]), (int(120), int(550)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     cv2.putText(Indicator_page, Target_Class[5] + ' : ' + str(Meat_Category[5]), (int(120), int(650)), font, fontScale,
-#                 color,
-#                 thickness, cv2.LINE_AA)
-#     return Indicator_page
+def Text_indicator(Meat_Category, Target_Class, Indicator_page):
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    fontScale = 1
+    color = (0, 0, 0)
+    thickness = 3
+    cv2.putText(Indicator_page, "STATISTICAL INDICATOR", (int(120), int(60)), font, 1.5, color, 5, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[0] + ' : ' + str(Meat_Category[0]), (int(120), int(150)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[1] + ' : ' + str(Meat_Category[1]), (int(120), int(250)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[2] + ' : ' + str(Meat_Category[2]), (int(120), int(350)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[3] + ' : ' + str(Meat_Category[3]), (int(120), int(450)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[4] + ' : ' + str(Meat_Category[4]), (int(120), int(550)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    cv2.putText(Indicator_page, Target_Class[5] + ' : ' + str(Meat_Category[5]), (int(120), int(650)), font, fontScale,
+                color,
+                thickness, cv2.LINE_AA)
+    return Indicator_page
 
 
-# def show_multiple_images(image1, image2):
-#     image2 = cv2.resize(image2, (image1.shape[1], image1.shape[0]))
-#     numpy_horizontal_concat = np.concatenate((image1, image2), axis=1)
-#     cv2.imshow('Meat Labelling Automation (PK) ', numpy_horizontal_concat)
-#     return numpy_horizontal_concat
+def show_multiple_images(image1, image2):
+    image2 = cv2.resize(image2, (image1.shape[1], image1.shape[0]))
+    numpy_horizontal_concat = np.concatenate((image1, image2), axis=1)
+    cv2.imshow('Meat Labelling Automation (PK) ', numpy_horizontal_concat)
+    return numpy_horizontal_concat
