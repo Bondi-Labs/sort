@@ -5,7 +5,6 @@ from utilities import crop_frame, Text_indicator, show_multiple_images, Class_ma
 from ROI_EX_from_image_Sort import ROX_EX_image
 
 
-
 Video_input_path = '/media/pk/Data/Project/dataset/Meat_image/RMIT/Original_dataset/test_image/test_lab1_original.mp4'
 Video_Out_path = '/media/pk/Data/Project/dataset/Meat_image/RMIT/Original_dataset/test_image/'
 
